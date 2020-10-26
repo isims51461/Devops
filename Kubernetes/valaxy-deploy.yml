@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: valaxy-devops-project
+      app: valaxy-deployment
   replicas: 2 # tells deployment to run 2 pods matching the template
   strategy:
     type: RollingUpdate
@@ -16,10 +16,10 @@ spec:
   template:
     metadata:
       labels:
-        app: valaxy-devops-project
+        app: valaxy-deployment
     spec:
       containers:
-      - name: valaxy-devops-project
+      - name: valaxy-deployment
         image: yankils/simple-devops-image
         imagePullPolicy: Always
         ports:
